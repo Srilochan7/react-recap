@@ -7,26 +7,30 @@ function App() {
   
   // let counter = 0;
 
-  let [add, setAdd] = useState(0);
-  let [sub, setSub] = useState(0);
+  let [count, setCount] = useState(0);
 
 
   const addValue = () => {
-    setAdd(add + 1);
+    setCount(count + 1);
   };
+
+  const subValue = () =>{
+    setCount(count - 1);
+  };
+
 
   return (
     <>
       <h1> Counter app using react and vite </h1>
 
-      <h4> count = {add}</h4>
+      <h4> count = {count}</h4>
 
       <button
       onClick={addValue}
       >Add</button>
       <br></br>
       <br></br>
-      <button>Subtract</button>
+      <button onClick={subValue}>Subtract</button>
     </>
   )
 }
